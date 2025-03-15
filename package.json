@@ -1,11 +1,11 @@
 {
   "name": "book-app",
-  "module": "index.ts",
+  "module": "server/index.ts",
   "type": "module",
   "private": true,
   "scripts": {
-    "run": "bun run index.ts",
-    "dev": "bun --watch index.ts"
+    "run": "bun run server/index.ts",
+    "dev": "bun --watch server/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
