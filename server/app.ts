@@ -5,10 +5,7 @@ import booksRoute from './routes/books';
 const app = new Hono();
 app.use(logger());
 
-app.get('/', (c) => {
-  return c.json({ message: 'Hello from Hono!' });
-});
-
-app.route('/api/books', booksRoute);
+const apiRoutes = app.basePath('/api').route('/books', booksRoute);
 
 export default app;
+export type ApiRoutes = typeof apiRoutes;
